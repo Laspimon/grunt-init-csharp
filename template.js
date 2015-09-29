@@ -35,8 +35,7 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.projectGuid = generateUUID();
-    props.testProjectGuid = generateUUID();
-    //
+
     // Files to copy (and process).
     var files = init.filesToCopy(props);
 

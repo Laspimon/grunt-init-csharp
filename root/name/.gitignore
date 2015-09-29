@@ -114,3 +114,6 @@ UpgradeLog*.XML
 # NuGet
 packages/
 
+# Generated folders
+./bin/
+./obj/
