@@ -1,31 +1,24 @@
 
-all:
-	@xbuild /p:Configuration=Debug /verbosity:quiet /nologo {%= name %}.csproj
-	@konsole --nofork -e "mono bin/Debug/{%= name %}.exe"
-	@echo ""
+all: build.debug-quiet run.debug
 
-.PHONY: release
-release:
-	@xbuild /p:Configuration=Release /verbosity:quiet /nologo  {%= name %}.csproj
-	@konsole --nofork -e "mono bin/Release/{%= name %}.exe"
-	@echo ""
+build.release-quiet:
+	@xbuild /p:Configuration=Release /verbosity:quiet /nologo  test.csproj
 
-.PHONY: debug
-debug:
-	@xbuild /p:Configuration=Debug /nologo {%= name %}.csproj
-	@konsole --nofork -e "mono bin/Debug/{%= name %}.exe"
-	@echo ""
+build.debug-quiet:
+	@xbuild /p:Configuration=Debug /verbosity:quiet /nologo test.csproj
 
-.PHONY: build.debug
 build.debug:
-	@xbuild /p:Configuration=Debug /nologo {%= name %}.csproj
-	@echo ""
+	@xbuild /p:Configuration=Debug /nologo test.csproj
 
-.PHONY: build.release
-	@xbuild /p:Configuration=Release /nologo {%= name %}.csproj
-	@echo ""
+build.release:
+	@xbuild /p:Configuration=Release /nologo test.csproj
 
-.PHONY: clean
+run.release:
+	@xterm -e "mono bin/Release/test.exe"
+
+run.debug:
+	@xterm -e "mono bin/Debug/test.exe"
+
 clean:
 	@rm -rf ./bin/
 	@echo "DEL BIN"

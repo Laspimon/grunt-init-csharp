@@ -1,9 +1,9 @@
 # grunt-init-csharpsolution
 
-> Quickly scaffold a C# 4.5 solution with [grunt-init][]. Adapt to suit your own needs.
-
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [nodejs]: https://nodejs.org/en/
+
+Quickly scaffold a C# solution with [grunt-init][]. Adapt to suit your own needs.
 
 ## Installation
 If you haven't already done so, install [nodejs][] and [grunt-init][].
