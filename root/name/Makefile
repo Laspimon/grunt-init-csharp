@@ -19,11 +19,11 @@ build.release:
 
 run.release:
 	@echo "make: run release"
-	@xterm -bg black -fg white -e "mono bin/Release/{%= name %}.exe"
+	@xterm -bg black -fg white -geometry 100x30+350-150 -e "mono bin/Release/{%= name %}.exe"
 
 run.debug:
 	@echo "make: run debug"
-	@xterm -bg black -fg white -e "mono bin/Debug/{%= name %}.exe"
+	@xterm -bg black -fg white -geometry 100x30+365-150 -e "mono bin/Debug/{%= name %}.exe"
 
 clean:
 	@echo "make: clean"
