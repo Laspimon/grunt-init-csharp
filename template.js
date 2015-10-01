@@ -48,7 +48,6 @@ exports.template = function(grunt, init, done) {
         delete files[file];
       }
     }
-
     init.copyAndProcess(files, props);
 
     done();
