@@ -1,5 +1,8 @@
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace {%= name %}
 {
@@ -8,7 +11,7 @@ namespace {%= name %}
         private static void Main(string[] args)
         {
             Console.WriteLine("{%= name %} has come to");
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

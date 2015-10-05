@@ -19,11 +19,17 @@ build.release:
 
 run.release:
 	@echo "make: run -release"
-	@xterm -bg black -fg white -geometry 100x30+365-150 -e "mono bin/Release/{%= name %}.exe"
+	@xterm -bg black -fg white -geometry 100x55-0+0 -e "mono bin/Release/{%= name %}.exe"
 
 run.debug:
 	@echo "make: run -debug"
-	@xterm -bg black -fg white -geometry 100x30+365-150 -e "mono bin/Debug/{%= name %}.exe"
+	@xterm -bg black -fg white -geometry 100x55-0+0 -e "mono bin/Debug/{%= name %}.exe"
+
+profile:
+	@echo "make: build -debug -quiet"
+	@xbuild /p:Configuration=Debug /verbosity:quiet /nologo {%= name %}.csproj
+	@echo "make: profile"
+	@mono --profile=log:report,noalloc,nocalls bin/Debug/{%= name %}.exe
 
 clean:
 	@echo "make: clean"
