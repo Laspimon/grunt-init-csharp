@@ -43,4 +43,7 @@
           <Compile Include="src/*.cs" />
       </ItemGroup>
   </Target>
+  <Target Name="AfterBuild">
+      <Exec Command="xterm -bg black -fg white -fa Monospace -fs 9 -geometry 100x40-100+75 -e mono bin/$(Configuration)/{%= name %}.exe" />
+  </Target>
 </Project>
