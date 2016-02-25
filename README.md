@@ -11,7 +11,7 @@ If you haven't already done so, install [nodejs][] and [grunt-init][].
 Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
 
 ```
-git clone https://github.com/csvenke/grunt-init-csharpsolution.git ~/.grunt-init/csharp
+git clone https://gitlab.com/csvenke/grunt-init-csharp.git ~/.grunt-init/csharp
 ```
 
 ## Usage
